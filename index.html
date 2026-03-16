@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Simulator</title>
+    
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+<body>
+
+    <div id="main-menu" class="overlay">
+        <h1>SPACE SIMULATOR</h1>
+        <button id="btn-start">Start a Space</button>
+        <button id="btn-settings">Settings 60 (fps)</button>
+        <button id="btn-console">Console</button>
+    </div>
+
+    <div id="settings-menu" class="overlay hidden">
+        <div class="panel">
+            <h2>Settings</h2>
+            <div class="setting-group">
+                <label for="graphics-select">Graphics:</label>
+                <select id="graphics-select">
+                    <option value="low">Low (Low Poly)</option>
+                    <option value="average">Average (Blur)</option>
+                    <option value="high">High (Modeled)</option>
+                    <option value="ultra" selected>Ultra (Elaborated)</option>
+                </select>
+            </div>
+            <div class="setting-group">
+                <label for="toggle-stars">Deep Space (Galaxies):</label>
+                <input type="checkbox" id="toggle-stars" checked>
+            </div>
+            <div class="setting-group">
+                <label for="toggle-planets">Planets & Orbits:</label>
+                <input type="checkbox" id="toggle-planets" checked>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button id="btn-settings-back" style="min-width: auto;">Back</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="console-menu" class="overlay hidden">
+        <div class="panel" style="width: 600px;">
+            <h2>Developer Console</h2>
+            <div id="console-log"><div>> System initialized...</div></div>
+            <div style="text-align: center;">
+                <button id="btn-console-back" style="min-width: auto;">Back</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-ui" class="hidden">
+        <button id="btn-exit">Quit to Menu</button>
+        <button id="btn-toggle-time">Pause Time</button>
+        <button id="btn-reset-view" class="hidden">Back to Sun</button>
+    </div>
+
+    <div id="planet-info-btn-container" class="hidden">
+        <button id="btn-about-planet">About <span id="selected-planet-name">Planet</span></button>
+    </div>
+
+    <div id="planet-modal" class="hidden">
+        <h2 id="modal-title">Planet Name</h2>
+        <img id="modal-image" src="" alt="Planet">
+        <p id="modal-desc">Description goes here.</p>
+        <button id="btn-close-modal">Close</button>
+    </div>
+
+    <div id="canvas-container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    
+    <script src="Space/space.js"></script>
+    <script src="Script/script.js"></script>
+
+</body>
+</html>
+
+          
