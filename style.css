@@ -1,0 +1,158 @@
+body { 
+    margin: 0; 
+    overflow: hidden; 
+    background-color: #000; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    color: #fff; 
+    user-select: none; 
+}
+
+#canvas-container { 
+    width: 100vw; 
+    height: 100vh; 
+    display: none; 
+}
+
+.overlay { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    background: rgba(0, 0, 0, 0.9); 
+    z-index: 10; 
+}
+
+.hidden { display: none !important; }
+
+h1 { 
+    font-size: 3rem; 
+    margin-bottom: 2rem; 
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+}
+
+button { 
+    background: transparent; 
+    color: #fff; 
+    border: 2px solid #fff; 
+    padding: 15px 30px; 
+    margin: 10px; 
+    font-size: 1.2rem; 
+    cursor: pointer; 
+    transition: all 0.3s; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    min-width: 250px; 
+}
+
+button:hover { 
+    background: #fff; 
+    color: #000; 
+}
+
+.panel { 
+    background: rgba(20, 20, 30, 0.95); 
+    border: 1px solid #555; 
+    padding: 30px; 
+    border-radius: 10px; 
+    width: 400px; 
+    max-width: 90%; 
+}
+
+.panel h2 { 
+    margin-top: 0; 
+    text-align: center; 
+}
+
+.setting-group { 
+    margin-bottom: 15px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+select, input[type="checkbox"] { 
+    background: #000; 
+    color: #fff; 
+    border: 1px solid #555; 
+    padding: 5px 10px; 
+    font-size: 1rem; 
+}
+
+#game-ui { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    z-index: 5; 
+    display: flex; 
+    gap: 10px; 
+    flex-wrap: wrap; 
+}
+
+#game-ui button { 
+    padding: 10px 15px; 
+    font-size: 1rem; 
+    min-width: auto; 
+    margin: 0; 
+}
+
+#planet-info-btn-container { 
+    position: absolute; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 5; 
+}
+
+#planet-modal { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background: rgba(10, 20, 40, 0.98); 
+    border: 2px solid #4a90e2; 
+    padding: 30px; 
+    border-radius: 10px; 
+    z-index: 20; 
+    width: 500px; 
+    max-width: 90vw; 
+    max-height: 85vh; 
+    overflow-y: auto; 
+    text-align: center; 
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.5); 
+}
+
+#modal-image { 
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    margin: 15px 0; 
+    border: 1px solid #555; 
+    background: #000; 
+}
+
+#modal-desc { 
+    font-size: 0.95rem; 
+    line-height: 1.6; 
+    text-align: left; 
+    margin-bottom: 20px; 
+    color: #ddd; 
+    white-space: pre-wrap; 
+}
+
+#console-log { 
+    height: 200px; 
+    overflow-y: auto; 
+    background: #000; 
+    border: 1px solid #333; 
+    padding: 10px; 
+    font-family: monospace; 
+    font-size: 0.9rem; 
+    color: #0f0; 
+    margin-bottom: 20px; 
+}
